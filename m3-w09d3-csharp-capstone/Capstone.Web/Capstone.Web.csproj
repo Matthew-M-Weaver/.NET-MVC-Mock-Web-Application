@@ -119,7 +119,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Models\ParkModel.cs" />
+=======
+    <Compile Include="Models\DailyForecast.cs" />
+>>>>>>> 04e7e0206ec315e349efa479a97efcff20bb5c57
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
