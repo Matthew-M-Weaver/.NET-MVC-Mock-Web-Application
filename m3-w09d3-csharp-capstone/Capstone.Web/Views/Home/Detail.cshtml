@@ -1,0 +1,47 @@
+﻿@using Capstone.Web.Models
+@model ParkModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h1>@Model.ParkName</h1>
+    <img src="~/Content/@{Model.ParkCode + ".png"} " />
+    <div>
+        State: @Model.State
+    </div>
+    <div>
+        Acreage: @Model.Acreage
+    </div>
+    <div>
+        Elevation: @Model.ElevationInFeet
+    </div>
+    <div>
+        Miles of Trail: @Model.MilesOfTrail
+    </div>
+    <div>
+        Number of Campsites: @Model.NumberOfCampsites
+    </div>
+    <div>
+        Climate: @Model.Climate
+    </div>
+    <div>
+        Founded in: @Model.YearFounded
+    </div>
+    <div>
+        Annual Visitor Count: @Model.AnnualVisitorCount
+    </div>
+    <div>
+        @Model.InspirationalQuote - @Model.InspirationalQuoteSource
+    </div>
+    <div>
+        Entry Fee: @Model.EntryFee
+    </div>
+    <div>
+        Number of Animal Species: @Model.NumberOfAnimalSpecies
+    </div>
+    <div>
+        @Model.ParkDescription
+    </div>
+</div>
+
+
