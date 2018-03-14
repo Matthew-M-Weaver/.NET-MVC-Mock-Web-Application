@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>National Park Weather Service</title>
+    <link rel="stylesheet" href="~/Content/stylesheet.css" />
+</head>
+<body>
+    <header>
+        <img src="~/Content/logo.png" alt="National Park Weather Service Logo" />
+    </header>
+    <nav>
+        <ul>
+            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+            <li><a href="#">National Park Weather Service</a></li>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Survey", "Survey", "Home")</li>
+            <li>@Html.ActionLink("Park Ranking", "SurveyResult", "Home")</li>
+        </ul>
+    </nav>
+
+    <section id="main">
+
+        @RenderBody()
+
+    </section>
+    <footer>
+        Fly By Night Bank | Varying Locations | sales@flybynightbank.com
+    </footer>
+</body>
+</html>
