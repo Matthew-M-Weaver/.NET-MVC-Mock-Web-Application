@@ -11,6 +11,8 @@ namespace Capstone.Web.App_Start
     using Ninject;
     using Ninject.Web.Common;
 
+    using Capstone.Web.DAL;
+
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -61,6 +63,10 @@ namespace Capstone.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IParkDAL>().To<ParkSqlDAL>().WithConstructorArgument("connectionString", @"Data Source = localhost\sqlexpress; Initial Catalog = ParkWeather; Integrated Security = True");
+            kernel.Bind<IDailyForecastDAL>().To<DailyForecastSqlDAL>().WithConstructorArgument("connectionString", @"Data Source = localhost\sqlexpress; Initial Catalog = ParkWeather; Integrated Security = True");
+            kernel.Bind<ISurveyDAL>().To<SurveySqlDAL>().WithConstructorArgument("connectionString", @"Data Source = localhost\sqlexpress; Initial Catalog = ParkWeather; Integrated Security = True");
+            kernel.Bind<ISurveyResultDAL>().To<SurveyResultSqlDAL>().WithConstructorArgument("connectionString", @"Data Source = localhost\sqlexpress; Initial Catalog = ParkWeather; Integrated Security = True");
         }        
     }
 }
