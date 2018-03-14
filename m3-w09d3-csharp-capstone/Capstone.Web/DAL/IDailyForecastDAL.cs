@@ -7,7 +7,7 @@ using Capstone.Web.Models;
 
 namespace Capstone.Web.DAL
 {
-    interface IDailyForecastDAL
+    public interface IDailyForecastDAL
     {
         List<DailyForecast> GetDailyForecasts(ParkModel park);
     }

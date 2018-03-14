@@ -7,7 +7,7 @@ using Capstone.Web.Models;
 
 namespace Capstone.Web.DAL
 {
-    interface ISurveyResultDAL
+    public interface ISurveyResultDAL
     {
         List<SurveyResult> GetSurveyResults();
     }

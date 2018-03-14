@@ -14,14 +14,14 @@ namespace Capstone.Web.Models
 
         public void ConvertToCelsius()
         {
-            Low = (Low - 32) * (5 / 9);
-            High = (High - 32) * (5 / 9);
+            Low = ((Low - 32) * (5 / 9));
+            High = ((High - 32) * (5 / 9));
         }
 
         public void ConvertToFarenheit()
         {
-            Low = Low * (9 / 5) + 32;
-            High = High * (9 / 5) + 32;
+            Low = (Low * (9 / 5) + 32);
+            High = (High * (9 / 5) + 32);
         }
     }
 }

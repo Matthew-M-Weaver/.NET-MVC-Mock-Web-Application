@@ -12,6 +12,16 @@ namespace Capstone.Web.DAL
         private string connectionString;
         private string SQL_GetSurveyResults = @"SELECT COUNT(survey_result.parkCode) as votes, park.parkName FROM survey_result JOIN park ON survey_result.parkCode = park.parkCode GROUP BY park.parkName ORDER BY votes DESC;";
 
+        public SurveyResultSqlDAL()
+        {
+
+        }
+
+        public SurveyResultSqlDAL(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
+
         public List<SurveyResult> GetSurveyResults()
         {
             try

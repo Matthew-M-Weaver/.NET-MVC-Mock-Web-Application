@@ -7,7 +7,7 @@ using Capstone.Web.Models;
 
 namespace Capstone.Web.DAL
 {
-    interface IParkDAL
+    public interface IParkDAL
     {
         List<ParkModel> GetIndexInformation();
         ParkModel GetDetailInformation(ParkModel park);

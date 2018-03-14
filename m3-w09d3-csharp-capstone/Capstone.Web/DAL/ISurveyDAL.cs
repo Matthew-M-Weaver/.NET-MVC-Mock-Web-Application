@@ -7,7 +7,7 @@ using Capstone.Web.Models;
 
 namespace Capstone.Web.DAL
 {
-    interface ISurveyDAL
+    public interface ISurveyDAL
     {
         bool CommitSurvey(SurveyModel Survey);
     }

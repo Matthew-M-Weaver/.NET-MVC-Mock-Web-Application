@@ -9,8 +9,18 @@ namespace Capstone.Web.DAL
 {
     public class SurveySqlDAL : ISurveyDAL
     {
-        private string connectionString = @"Data Source = localhost\sqlexpress; Initial Catalog = ParkWeather; Integrated Security = True";
+        private string connectionString;
         private string SQL_CommitSurvey = @"INSERT INTO survey_result values (@parkCode, @emailAddress, @state, @activityLevel);";
+
+        public SurveySqlDAL()
+        {
+
+        }
+
+        public SurveySqlDAL(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
 
         public bool CommitSurvey(SurveyModel survey)
         {

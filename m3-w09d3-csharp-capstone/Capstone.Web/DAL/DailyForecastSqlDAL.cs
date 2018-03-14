@@ -9,8 +9,18 @@ namespace Capstone.Web.DAL
 {
     public class DailyForecastSqlDAL : IDailyForecastDAL
     {
-        private string connectionString = @"Data Source = localhost\sqlexpress; Initial Catalog = ParkWeather; Integrated Security = True";
+        private string connectionString;
         private string SQL_GetDailyForecasts = @"SELECT * FROM weather WHERE parkCode = @parkCode;";
+
+        public DailyForecastSqlDAL()
+        {
+
+        }
+
+        public DailyForecastSqlDAL(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
 
         public List<DailyForecast> GetDailyForecasts(ParkModel park)
         {
