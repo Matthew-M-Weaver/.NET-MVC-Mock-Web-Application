@@ -9,6 +9,6 @@ namespace Capstone.Web.DAL
 {
     interface IDailyForecastDAL
     {
-        DailyForecast[] GetDailyForecasts(ParkModel park);
+        List<DailyForecast> GetDailyForecasts(ParkModel park);
     }
 }

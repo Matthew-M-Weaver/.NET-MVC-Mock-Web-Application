@@ -9,6 +9,6 @@ namespace Capstone.Web.DAL
 {
     interface ISurveyDAL
     {
-        int CommitSurevey(SurveyModel Survey);
+        bool CommitSurvey(SurveyModel Survey);
     }
 }

@@ -66,6 +66,8 @@ namespace Capstone.Web.DAL
                         park.InspirationalQuoteSource = Convert.ToString(reader["inspirationalQuoteSource"]);
                         park.EntryFee = Convert.ToInt16(reader["entryFee"]);
                         park.NumberOfAnimalSpecies = Convert.ToInt16(reader["numberOfAnimalSpecies"]);
+                        park.TempType = "Farenheit";
+                        park.NeedsConverted = false;
                     }
                 }
                 return park;

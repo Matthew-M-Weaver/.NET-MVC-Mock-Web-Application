@@ -9,6 +9,6 @@ namespace Capstone.Web.DAL
 {
     interface ISurveyResultDAL
     {
-        List<SurveyResultModel> GetSurveyResults();
+        List<SurveyResult> GetSurveyResults();
     }
 }

@@ -24,5 +24,6 @@ namespace Capstone.Web.Models
         public int NumberOfAnimalSpecies { get; set; }
         public string TempType { get; set; }
         public bool NeedsConverted { get; set; }
+        public List<DailyForecast> FiveDayForecast { get; set; }
     }
 }
