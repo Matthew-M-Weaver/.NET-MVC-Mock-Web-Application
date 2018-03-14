@@ -44,4 +44,22 @@
     </div>
 </div>
 
+@using (Html.BeginForm("Detail", "Home", FormMethod.Get))
+{
+    @Html.HiddenFor(m => m.ParkName)
+    @Html.HiddenFor(m => m.State)
+    @Html.HiddenFor(m => m.Acreage)
+    @Html.HiddenFor(m => m.ElevationInFeet)
+    @Html.HiddenFor(m => m.MilesOfTrail)
+    @Html.HiddenFor(m => m.NumberOfCampsites)
+    @Html.HiddenFor(m => m.Climate)
+    @Html.HiddenFor(m => m.YearFounded)
+    @Html.HiddenFor(m => m.AnnualVisitorCount)
+    @Html.HiddenFor(m => m.InspirationalQuote)
+    @Html.HiddenFor(m => m.InspirationalQuoteSource)
+    @Html.HiddenFor(m => m.EntryFee)
+    @Html.HiddenFor(m => m.NumberOfAnimalSpecies)
+    @Html.HiddenFor(m => m.ParkDescription)
+}
+
 
