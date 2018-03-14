@@ -7,7 +7,5 @@ namespace Capstone.Web.Models
 {
     public class SurveyModel
     {
-        public string ParkCode { get; set; }
-        public string EmailAddress { get; set; }
     }
 }
