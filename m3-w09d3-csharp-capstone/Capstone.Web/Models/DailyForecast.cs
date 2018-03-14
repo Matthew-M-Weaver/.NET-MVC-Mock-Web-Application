@@ -18,7 +18,7 @@ namespace Capstone.Web.Models
             High = (High - 32) * (5 / 9);
         }
 
-        public ConvertToFarenheit()
+        public void ConvertToFarenheit()
         {
             Low = Low * (9 / 5) + 32;
             High = High * (9 / 5) + 32;

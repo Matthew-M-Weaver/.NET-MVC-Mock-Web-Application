@@ -116,14 +116,19 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\DailyForecastSqlDAL.cs" />
+    <Compile Include="DAL\IDailyForecastDAL.cs" />
+    <Compile Include="DAL\IParkDAL.cs" />
+    <Compile Include="DAL\ISurveyDAL.cs" />
+    <Compile Include="DAL\ISurveyResultDAL.cs" />
+    <Compile Include="DAL\ParkSqlDAL.cs" />
+    <Compile Include="DAL\SurveyResultSqlDAL.cs" />
+    <Compile Include="DAL\SurveySqlDAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Models\ParkModel.cs" />
-=======
     <Compile Include="Models\DailyForecast.cs" />
->>>>>>> 04e7e0206ec315e349efa479a97efcff20bb5c57
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
