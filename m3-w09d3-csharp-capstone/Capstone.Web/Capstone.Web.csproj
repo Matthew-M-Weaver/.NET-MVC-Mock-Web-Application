@@ -150,6 +150,8 @@
     </Compile>
     <Compile Include="Models\ParkModel.cs" />
     <Compile Include="Models\DailyForecast.cs" />
+    <Compile Include="Models\SurveyModel.cs" />
+    <Compile Include="Models\SurveyResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
