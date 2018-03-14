@@ -1,0 +1,21 @@
+﻿@using Capstone.Web.Models
+@model List<ParkModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>National Parks</h1>
+<p>Welcome! Here, as you can see, is a list of National Parks that are located in the United States. If you would like more details on any of the parks, feel free to click the image or name of that park! Thank you for choosing the National Park Weather Service!</p>
+
+@foreach (ParkModel park in Model)
+{
+<div>
+    <a href="localhost0000/Home/Detail"><img src="~/Content/@{park.ParkCode + ".png"} " /></a>
+    <div>
+        <a href="localhost0000/Home/Detail">@park.ParkName</a>
+        @park.ParkDescription
+    </div>
+</div>
+}
+
+
+
