@@ -25,30 +25,78 @@
 </div>
 
 <div>
+    <h2>Five Day Weather Forecast: </h2>
     <table>
-        Five Day Forecast
         <tr>
-            <td><img src="~/Content/@Model.FiveDayForecast[0].ImageCondition.Replace(" ", "-")" /></td>
-            <td><img src="~/Content/@Model.FiveDayForecast[1].ImageCondition.Replace(" ", "-")" /></td>
-            <td><img src="~/Content/@Model.FiveDayForecast[2].ImageCondition.Replace(" ", "-")" /></td>
-            <td><img src="~/Content/@Model.FiveDayForecast[3].ImageCondition.Replace(" ", "-")" /></td>
-            <td><img src="~/Content/@Model.FiveDayForecast[4].ImageCondition.Replace(" ", "-")" /></td>
+            @for (int i = 1; i <= 5; i++)
+            {
+                if (i == 1)
+                {
+                    <td>Today's Forecast</td>
+                }
+                else if (i == 2)
+                {
+                    <td>Tommorow's Forecast</td>
+                }
+                else
+                {
+                    <td>Forcast for @i  Days Out</td>
+                }
+            }
         </tr>
         <tr>
-            High Temperature
-            <td>Day 1: High of @Model.FiveDayForecast[0].High @Model.TempType</td>
-            <td>Day 2: High of @Model.FiveDayForecast[1].High @Model.TempType</td>
-            <td>Day 3: High of @Model.FiveDayForecast[2].High @Model.TempType</td>
-            <td>Day 4: High of @Model.FiveDayForecast[3].High @Model.TempType</td>
-            <td>Day 5: High of @Model.FiveDayForecast[4].High @Model.TempType</td>
+            @for (int i = 0; i < 5; i++)
+            {
+                <td><img src="~/Content/@Model.FiveDayForecast[i].ImageCondition.Replace(" ", "-")" /></td>
+            }
         </tr>
         <tr>
-            <td>Low of @Model.FiveDayForecast[0].Low @Model.TempType</td>
-            <td>Low of @Model.FiveDayForecast[1].Low @Model.TempType</td>
-            <td>Low of @Model.FiveDayForecast[2].Low @Model.TempType</td>
-            <td>Low of @Model.FiveDayForecast[3].Low @Model.TempType</td>
-            <td>Low of @Model.FiveDayForecast[4].Low @Model.TempType</td>
+            @foreach (DailyForecast forecast in Model.FiveDayForecast)
+            {
+                string warning = "";
+                switch (forecast.Conditions)
+                {
+                    case "snow":
+                        warning += "Pack snowshoes! ";
+                        break;
+                    case "rain":
+                        warning += "Pack rain gear and waterproof shoes! ";
+                        break;
+                    case "thunderstorms":
+                        warning += "Seek shelter and avoid exposed ridges! ";
+                        break;
+                    case "sunny":
+                        warning += "Pack sunscreen! ";
+                        break;
+                }
+                if (forecast.High > 75)
+                {
+                    warning += "Bring extra water! ";
+                }
+                else if (forecast.Low < 20)
+                {
+                    warning += "Exposure to low temperatures may cause fristbite! ";
+                }
+                if (forecast.High - forecast.Low > 20)
+                {
+                    warning += "Bring breathable layers!";
+                }
+                <td>@warning</td>
+            }
         </tr>
+        <tr>
+            @for (int i = 0; i < 5; i++)
+            {
+                <td>High of: @Model.FiveDayForecast[i].High @Model.TempType</td>
+            }
+        </tr>
+        <tr>
+            @for (int i = 0; i < 5; i++)
+            {
+                <td>Low of: @Model.FiveDayForecast[i].Low @Model.TempType</td>
+            }
+        </tr>
+            
     </table>
 </div>
 
@@ -72,7 +120,6 @@
 <div>
     @Html.CheckBoxFor(m => m.NeedsConverted)
     <button>See Temperatures in Celsius</button>
-
 </div>
 
 }
