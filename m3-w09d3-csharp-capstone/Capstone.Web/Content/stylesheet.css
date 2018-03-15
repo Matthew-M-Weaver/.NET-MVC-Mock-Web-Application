@@ -69,3 +69,21 @@ footer {
 .descriptor {
     padding: 15px;
 }
+
+.table-img {
+    height: 120px;
+    width: 160px;
+    margin: 35px;
+    margin-bottom: 5px;
+}
+
+td {
+    padding: 7px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    padding: 25px;
+}
