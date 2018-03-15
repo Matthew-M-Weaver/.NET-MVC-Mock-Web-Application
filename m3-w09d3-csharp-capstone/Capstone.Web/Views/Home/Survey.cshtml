@@ -73,23 +73,6 @@
     states.Add(new SelectListItem { Text = "Wisconsin", Value = "Wisconsin" });
     states.Add(new SelectListItem { Text = "Wyoming", Value = "Wyoming" });
 
-<<<<<<< HEAD
-    </div>
-    <div>
-        @Html.Label("EmailAddress", "Email Address")
-        @Html.TextBoxFor(m => m.EmailAddress)
-    </div>
-    <div>
-        @Html.Label("State", "Residence State")
-        @Html.DropDownList("States", new SelectList(states))
-    </div>
-    <div>
-        @Html.Label("ActivityLevel", "Activity Level")
-        @Html.DropDownList("activityLevels", new SelectList(activityLevels))
-    </div>
-    <div><button class="formSubmitButton">Submit</button></div>
-}
-=======
 
     List<SelectListItem> activityLevels = new List<SelectListItem>();
     activityLevels.Add(new SelectListItem { Text = "Inactive", Value = "Inactive" });
@@ -112,5 +95,5 @@
 </div>
 <div><button>Submit</button></div>
         }
->>>>>>> a12954174718387b38b903a3ccf02f4dbc353cfe
+
 
