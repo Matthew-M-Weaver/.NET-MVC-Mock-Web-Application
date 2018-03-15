@@ -46,3 +46,16 @@
 footer {
     padding: 15px;
 }
+.park img {
+
+    height: 200px;
+    width: 200px;
+    float: left;
+    padding: 15px;
+}
+.inline-block {
+    display: inline-block;
+}
+.descriptor {
+    padding: 15px;
+}

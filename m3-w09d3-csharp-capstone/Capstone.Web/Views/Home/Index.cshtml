@@ -8,9 +8,9 @@
 
 @foreach (ParkModel park in Model)
 {
-<div>
-    <a href="@Url.Action("Detail", "Home", park, null)"><img src="~/Content/@park.ImageLocation" /></a>
-    <div>
+<div class="inline-block">
+    <div class="park"><a href="@Url.Action("Detail", "Home", park, null)"><img src="~/Content/@park.ImageLocation" /></a></div>
+    <div class="descriptor">
         <a href="@Url.Action("Detail", "Home", park, null)">@park.ParkName</a>
         @park.ParkDescription
     </div>
