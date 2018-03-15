@@ -6,100 +6,93 @@
 @using (Html.BeginForm("Commit", "Home", FormMethod.Post))
 {
 
-    List<SelectListItem> parkCodes = new List<SelectListItem>
-    {
-        new SelectListItem { Text = "Cuyahoga Valley National Park", Value = "CVNP"},
-        new SelectListItem { Text = "Everglades National Park", Value = "ENP"},
-        new SelectListItem { Text = "Grand Canyon National Park", Value = "GCNP"},
-        new SelectListItem { Text = "Glacier National Park", Value = "GNP"},
-        new SelectListItem { Text = "Great Smoky Mountains National Park", Value = "GSMNP"},
-        new SelectListItem { Text = "Grand Teton National Park", Value = "GTNP"},
-        new SelectListItem { Text = "Mount Rainier National Park", Value = "MRNP"},
-        new SelectListItem { Text = "Rocky Mountain National Park", Value = "RMNP"},
-        new SelectListItem { Text = "Yellowstone National Park", Value = "YNP"},
-        new SelectListItem { Text = "Yosemite National Park", Value = "YNP2"}
-    };
+    List<SelectListItem> parkCodes = new List<SelectListItem>();
+    parkCodes.Add(new SelectListItem { Text = "Cuyahoga Valley National Park", Value = "CVNP" });
+    parkCodes.Add(new SelectListItem { Text = "Everglades National Park", Value = "ENP" });
+    parkCodes.Add(new SelectListItem { Text = "Grand Canyon National Park", Value = "GCNP" });
+    parkCodes.Add(new SelectListItem { Text = "Glacier National Park", Value = "GNP" });
+    parkCodes.Add(new SelectListItem { Text = "Great Smoky Mountains National Park", Value = "GSMNP" });
+    parkCodes.Add(new SelectListItem { Text = "Grand Teton National Park", Value = "GTNP" });
+    parkCodes.Add(new SelectListItem { Text = "Mount Rainier National Park", Value = "MRNP" });
+    parkCodes.Add(new SelectListItem { Text = "Rocky Mountain National Park", Value = "RMNP" });
+    parkCodes.Add(new SelectListItem { Text = "Yellowstone National Park", Value = "YNP" });
+    parkCodes.Add(new SelectListItem { Text = "Yosemite National Park", Value = "YNP2" });
 
 
-    List<SelectListItem> states = new List<SelectListItem>
-    {
-        new SelectListItem { Text = "Alabama", Value = "Alabama"},
-        new SelectListItem { Text = "Alaska", Value = "Alaska"},
-        new SelectListItem { Text = "Arizona", Value = "Arizona"},
-        new SelectListItem { Text = "Arkansas", Value = "Arkansas"},
-        new SelectListItem { Text = "California", Value = "California"},
-        new SelectListItem { Text = "Colorado", Value = "Colorado"},
-        new SelectListItem { Text = "Connecticut", Value = "Connecticut"},
-        new SelectListItem { Text = "Delaware", Value = "Delaware"},
-        new SelectListItem { Text = "Florida", Value = "Florida"},
-        new SelectListItem { Text = "Georgia", Value = "Georgia"},
-        new SelectListItem { Text = "Hawaii", Value = "Hawaii"},
-        new SelectListItem { Text = "Idaho", Value = "Idaho"},
-        new SelectListItem { Text = "Illinois", Value = "Illinois"},
-        new SelectListItem { Text = "Indiana", Value = "Indiana"},
-        new SelectListItem { Text = "Iowa", Value = "Iowa"},
-        new SelectListItem { Text = "Kansas", Value = "Kansas"},
-        new SelectListItem { Text = "Kentucky", Value = "Kentucky"},
-        new SelectListItem { Text = "Louisiana", Value = "Louisiana"},
-        new SelectListItem { Text = "Maine", Value = "Maine"},
-        new SelectListItem { Text = "Maryland", Value = "Maryland"},
-        new SelectListItem { Text = "Massachusetts", Value = "Massachusetts"},
-        new SelectListItem { Text = "Michigan", Value = "Michigan"},
-        new SelectListItem { Text = "Minnesota", Value = "Minnesota"},
-        new SelectListItem { Text = "Mississippi", Value = "Mississippi"},
-        new SelectListItem { Text = "Missouri", Value = "Missouri"},
-        new SelectListItem { Text = "Montana", Value = "Montana"},
-        new SelectListItem { Text = "Nebraska", Value = "Nebraska"},
-        new SelectListItem { Text = "Nevada", Value = "Nevada"},
-        new SelectListItem { Text = "New Hampshire", Value = "New Hampshire"},
-        new SelectListItem { Text = "New Jersey", Value = "New Jersey"},
-        new SelectListItem { Text = "New Mexico", Value = "New Mexico"},
-        new SelectListItem { Text = "New York", Value = "New York"},
-        new SelectListItem { Text = "North Carolina", Value = "North Carolina"},
-        new SelectListItem { Text = "North Dakota", Value = "North Dakota"},
-        new SelectListItem { Text = "Ohio", Value = "Ohio"},
-        new SelectListItem { Text = "Oklahoma", Value = "Oklahoma"},
-        new SelectListItem { Text = "Oregon", Value = "Oregon"},
-        new SelectListItem { Text = "Pennsylvania", Value = "Pennsylvania"},
-        new SelectListItem { Text = "Rhode Island", Value = "Rhode Island"},
-        new SelectListItem { Text = "South Carolina", Value = "South Carolina"},
-        new SelectListItem { Text = "South Dakota", Value = "South Dakota"},
-        new SelectListItem { Text = "Tennessee", Value = "Tennessee"},
-        new SelectListItem { Text = "Texas", Value = "Texas"},
-        new SelectListItem { Text = "Utah", Value = "Utah"},
-        new SelectListItem { Text = "Vermont", Value = "Vermont"},
-        new SelectListItem { Text = "Virginia", Value = "Virginia"},
-        new SelectListItem { Text = "Washington", Value = "Washington"},
-        new SelectListItem { Text = "West Virginia", Value = "West Virginia"},
-        new SelectListItem { Text = "Wisconsin", Value = "Wisconsin"},
-        new SelectListItem { Text = "Wyoming", Value = "Wyoming"}
-    };
 
-    List<SelectListItem> activityLevels = new List<SelectListItem>
-    {
-        new SelectListItem { Text = "Inactive", Value = "Inactive"},
-        new SelectListItem { Text = "Sedentary", Value = "Sedentary"},
-        new SelectListItem { Text = "Active", Value = "Active"},
-        new SelectListItem { Text = "Extremely Active", Value = "Extremely Active"}
 
-    };
-    <div>
-        @Html.Label("ParkCode", "Which park?")
-        @Html.DropDownList("Parks", new SelectList(parkCodes))
+    List<SelectListItem> states = new List<SelectListItem>();
+    states.Add(new SelectListItem { Text = "Alabama", Value = "Alabama" });
+    states.Add(new SelectListItem { Text = "Alaska", Value = "Alaska" });
+    states.Add(new SelectListItem { Text = "Arizona", Value = "Arizona" });
+    states.Add(new SelectListItem { Text = "Arkansas", Value = "Arkansas" });
+    states.Add(new SelectListItem { Text = "California", Value = "California" });
+    states.Add(new SelectListItem { Text = "Colorado", Value = "Colorado" });
+    states.Add(new SelectListItem { Text = "Connecticut", Value = "Connecticut" });
+    states.Add(new SelectListItem { Text = "Delaware", Value = "Delaware" });
+    states.Add(new SelectListItem { Text = "Florida", Value = "Florida" });
+    states.Add(new SelectListItem { Text = "Georgia", Value = "Georgia" });
+    states.Add(new SelectListItem { Text = "Hawaii", Value = "Hawaii" });
+    states.Add(new SelectListItem { Text = "Idaho", Value = "Idaho" });
+    states.Add(new SelectListItem { Text = "Illinois", Value = "Illinois" });
+    states.Add(new SelectListItem { Text = "Indiana", Value = "Indiana" });
+    states.Add(new SelectListItem { Text = "Iowa", Value = "Iowa" });
+    states.Add(new SelectListItem { Text = "Kansas", Value = "Kansas" });
+    states.Add(new SelectListItem { Text = "Kentucky", Value = "Kentucky" });
+    states.Add(new SelectListItem { Text = "Louisiana", Value = "Louisiana" });
+    states.Add(new SelectListItem { Text = "Maine", Value = "Maine" });
+    states.Add(new SelectListItem { Text = "Maryland", Value = "Maryland" });
+    states.Add(new SelectListItem { Text = "Massachusetts", Value = "Massachusetts" });
+    states.Add(new SelectListItem { Text = "Michigan", Value = "Michigan" });
+    states.Add(new SelectListItem { Text = "Minnesota", Value = "Minnesota" });
+    states.Add(new SelectListItem { Text = "Mississippi", Value = "Mississippi" });
+    states.Add(new SelectListItem { Text = "Missouri", Value = "Missouri" });
+    states.Add(new SelectListItem { Text = "Montana", Value = "Montana" });
+    states.Add(new SelectListItem { Text = "Nebraska", Value = "Nebraska" });
+    states.Add(new SelectListItem { Text = "Nevada", Value = "Nevada" });
+    states.Add(new SelectListItem { Text = "New Hampshire", Value = "New Hampshire" });
+    states.Add(new SelectListItem { Text = "New Jersey", Value = "New Jersey" });
+    states.Add(new SelectListItem { Text = "New Mexico", Value = "New Mexico" });
+    states.Add(new SelectListItem { Text = "New York", Value = "New York" });
+    states.Add(new SelectListItem { Text = "North Carolina", Value = "North Carolina" });
+    states.Add(new SelectListItem { Text = "North Dakota", Value = "North Dakota" });
+    states.Add(new SelectListItem { Text = "Ohio", Value = "Ohio" });
+    states.Add(new SelectListItem { Text = "Oklahoma", Value = "Oklahoma" });
+    states.Add(new SelectListItem { Text = "Oregon", Value = "Oregon" });
+    states.Add(new SelectListItem { Text = "Pennsylvania", Value = "Pennsylvania" });
+    states.Add(new SelectListItem { Text = "Rhode Island", Value = "Rhode Island" });
+    states.Add(new SelectListItem { Text = "South Carolina", Value = "South Carolina" });
+    states.Add(new SelectListItem { Text = "South Dakota", Value = "South Dakota" });
+    states.Add(new SelectListItem { Text = "Tennessee", Value = "Tennessee" });
+    states.Add(new SelectListItem { Text = "Texas", Value = "Texas" });
+    states.Add(new SelectListItem { Text = "Utah", Value = "Utah" });
+    states.Add(new SelectListItem { Text = "Vermont", Value = "Vermont" });
+    states.Add(new SelectListItem { Text = "Virginia", Value = "Virginia" });
+    states.Add(new SelectListItem { Text = "Washington", Value = "Washington" });
+    states.Add(new SelectListItem { Text = "West Virginia", Value = "West Virginia" });
+    states.Add(new SelectListItem { Text = "Wisconsin", Value = "Wisconsin" });
+    states.Add(new SelectListItem { Text = "Wyoming", Value = "Wyoming" });
 
-    </div>
-    <div>
-        @Html.Label("EmailAddress", "Email Address")
-        @Html.TextBoxFor(m => m.EmailAddress)
-    </div>
-    <div>
-        @Html.Label("State", "Residence State")
-        @Html.DropDownList("States", new SelectList(states))
-    </div>
-    <div>
-        @Html.Label("ActivityLevel", "Activity Level")
-        @Html.DropDownList("activityLevels", new SelectList(activityLevels))
-    </div>
-    <div><button>Submit</button></div>
-}
+
+    List<SelectListItem> activityLevels = new List<SelectListItem>();
+    activityLevels.Add(new SelectListItem { Text = "Inactive", Value = "Inactive" });
+    activityLevels.Add(new SelectListItem { Text = "Sedentary", Value = "Sedentary" });
+    activityLevels.Add(new SelectListItem { Text = "Active", Value = "Active" });
+    activityLevels.Add(new SelectListItem { Text = "Extremely Active", Value = "Extremely Active" });
+<div>
+    @Html.DropDownListFor(m => m.ParkCode, parkCodes, "Select Favorite Park: ")
+
+</div>
+<div>
+    @Html.Label("EmailAddress", "Email Address")
+    @Html.TextBoxFor(m => m.EmailAddress)
+</div>
+<div>
+    @Html.DropDownListFor(m => m.State, states, "State of Residence")
+</div>
+<div>
+    @Html.DropDownListFor(m => m.ActivityLevel, activityLevels, "Aproximate Activity Level")
+</div>
+<div><button>Submit</button></div>
+        }
 

@@ -36,8 +36,8 @@ namespace Capstone.Web.DAL
                     while (reader.Read())
                     {
                         SurveyResult park = new SurveyResult();
-                        park.ParkName = Convert.ToString(reader["park.parkName"]);
                         park.Count = Convert.ToInt16(reader["votes"]);
+                        park.ParkName = Convert.ToString(reader["parkName"]);
                         rankings.Add(park);
                     }
                 }

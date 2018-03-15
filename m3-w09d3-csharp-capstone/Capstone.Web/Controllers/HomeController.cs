@@ -66,7 +66,7 @@ namespace Capstone.Web.Controllers
             return View();
         }
 
-        public ActionResult SurveyResult()
+        public ActionResult SurveyResults()
         {
             List<SurveyResult> parkRankings = surveyResultDAL.GetSurveyResults();
             return View(parkRankings);
@@ -76,7 +76,7 @@ namespace Capstone.Web.Controllers
         public ActionResult Commit(SurveyModel survey)
         {
             surveyDAL.CommitSurvey(survey);
-            return RedirectToAction("SurveyResult");
+            return RedirectToAction("SurveyResults");
         }
     }
 }
