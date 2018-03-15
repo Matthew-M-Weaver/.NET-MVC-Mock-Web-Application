@@ -38,7 +38,7 @@ namespace Capstone.Web.Controllers
             park.FiveDayForecast = dailyForecastDAL.GetDailyForecasts(park);
             if (conversion)
             {
-                if (tempType == "celsius")
+                if (tempType == "C")
                 {
                     foreach (DailyForecast forecast in park.FiveDayForecast)
                     {
@@ -46,7 +46,7 @@ namespace Capstone.Web.Controllers
                         forecast.Low = (int)(forecast.Low * 1.8 + 32);
 
                     }
-                    park.TempType = "fahrenheit";
+                    park.TempType = "F";
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace Capstone.Web.Controllers
                         forecast.High = (int)((forecast.High - 32) * .5556);
                         forecast.Low = (int)((forecast.Low - 32) * .5556);
                     }
-                    park.TempType = "celsius";
+                    park.TempType = "C";
                 }
             }
             return View(park);
@@ -73,9 +73,10 @@ namespace Capstone.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Commit()
+        public ActionResult Commit(SurveyModel survey)
         {
-            return View();
+            surveyDAL.CommitSurvey(survey);
+            return RedirectToAction("SurveyResult");
         }
     }
 }

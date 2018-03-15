@@ -36,18 +36,18 @@
         </tr>
         <tr>
             High Temperature
-            <td>Day 1: High of @Model.FiveDayForecast[0].High</td>
-            <td>Day 2: High of @Model.FiveDayForecast[1].High</td>
-            <td>Day 3: High of @Model.FiveDayForecast[2].High</td>
-            <td>Day 4: High of @Model.FiveDayForecast[3].High</td>
-            <td>Day 5: High of @Model.FiveDayForecast[4].High</td>
+            <td>Day 1: High of @Model.FiveDayForecast[0].High @Model.TempType</td>
+            <td>Day 2: High of @Model.FiveDayForecast[1].High @Model.TempType</td>
+            <td>Day 3: High of @Model.FiveDayForecast[2].High @Model.TempType</td>
+            <td>Day 4: High of @Model.FiveDayForecast[3].High @Model.TempType</td>
+            <td>Day 5: High of @Model.FiveDayForecast[4].High @Model.TempType</td>
         </tr>
         <tr>
-            <td>Low of @Model.FiveDayForecast[0].Low</td>
-            <td>Low of @Model.FiveDayForecast[1].Low</td>
-            <td>Low of @Model.FiveDayForecast[2].Low</td>
-            <td>Low of @Model.FiveDayForecast[3].Low</td>
-            <td>Low of @Model.FiveDayForecast[4].Low</td>
+            <td>Low of @Model.FiveDayForecast[0].Low @Model.TempType</td>
+            <td>Low of @Model.FiveDayForecast[1].Low @Model.TempType</td>
+            <td>Low of @Model.FiveDayForecast[2].Low @Model.TempType</td>
+            <td>Low of @Model.FiveDayForecast[3].Low @Model.TempType</td>
+            <td>Low of @Model.FiveDayForecast[4].Low @Model.TempType</td>
         </tr>
     </table>
 </div>
@@ -69,10 +69,11 @@
     @Html.HiddenFor(m => m.EntryFee, Model.EntryFee)
     @Html.HiddenFor(m => m.NumberOfAnimalSpecies, Model.NumberOfAnimalSpecies)
     @Html.HiddenFor(m => m.ParkDescription, Model.ParkDescription)
-    <div>
-        @Html.RadioButtonFor(m => m.NeedsConverted, true)
-        <button>Convert to </button>
-    </div>
+<div>
+    @Html.CheckBoxFor(m => m.NeedsConverted)
+    <button>See Temperatures in Celsius</button>
+
+</div>
 
 }
 

@@ -12,7 +12,5 @@ namespace Capstone.Web.Models
         public int High { get; set; }
         public string Conditions { get; set; }
         public string ImageCondition { get { return Conditions + ".png"; } }
-
-        
     }
 }
