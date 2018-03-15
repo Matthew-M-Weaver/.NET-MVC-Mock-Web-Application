@@ -11,6 +11,7 @@ namespace Capstone.Web.Models
         public int Low { get; set; }
         public int High { get; set; }
         public string Conditions { get; set; }
+        public string ImageCondition { get { return Conditions + ".png"; } }
 
         public void ConvertToCelsius()
         {

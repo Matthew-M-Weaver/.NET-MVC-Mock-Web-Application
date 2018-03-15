@@ -1,5 +1,23 @@
-﻿@{
+﻿@using Capstone.Web.Models
+@model SurveyModel
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div>
+    @Html.Label("ParkCode", "Which park?")
+<span>@Model.ParkCode</span>
+</div>
+<div>
+    @Html.Label("EmailAddress", "Email Address")
+<span>@Model.EmailAddress</span>
+</div>
+<div>
+    @Html.Label("State", "Residence State")
+<span>@Model.State</span>
+</div>
+<div>
+    @Html.Label("ActivityLevel", "Activity Level")
+<span>@Model.ActivityLevel</span>
+</div>
 
 
