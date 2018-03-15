@@ -109,6 +109,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\background.jpg" />
+    <Content Include="Content\background2.jpg" />
     <Content Include="Content\backpack.png" />
     <Content Include="Content\backpack2.jpg" />
     <Content Include="Content\cloudy.png" />
