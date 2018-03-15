@@ -126,6 +126,7 @@
     <Content Include="Content\rmnp.jpg" />
     <Content Include="Content\scenery.png" />
     <Content Include="Content\snow.png" />
+    <Content Include="Content\stylesheet.css" />
     <Content Include="Content\sunny.png" />
     <Content Include="Content\thunderstorms.png" />
     <Content Include="Content\ynp.jpg" />
