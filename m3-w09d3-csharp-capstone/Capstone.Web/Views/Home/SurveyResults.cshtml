@@ -1,6 +1,21 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@using Capstone.Web.Models
+@model List<SurveyResult>
 
 
+<h2>National Parks Web Survey Results!</h2>
+<p>We have asked our users to vote for their favorite National Park! Here are the results so far!</p>
+
+@{int rank = 1;}
+@foreach (SurveyResult park in Model)
+{
+    <div>
+        <h3>Rank @rank: @park.ParkName with @park.Count Votes!</h3>    
+    </div>
+    rank++;
+}
+
+<p>To take our survey please click the link at the top of the page!</p>
 
