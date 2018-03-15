@@ -16,16 +16,24 @@
         <div>Climate: @Model.Climate</div>
         <div>Founded in: @Model.YearFounded</div>
         <div>Annual Visitor Count: @Model.AnnualVisitorCount</div>
-        " @Model.InspirationalQuote " - @Model.InspirationalQuoteSource</div>
+        " @Model.InspirationalQuote " - @Model.InspirationalQuoteSource
+    </div>
     <div>Entry Fee:@Model.EntryFee.ToString("C")</div>
     <div>Number of Animal Species: @Model.NumberOfAnimalSpecies</div>
-    </div>
-    @Model.ParkDescription
+</div>
+@Model.ParkDescription
 </div>
 
 <div>
     <table>
         Five Day Forecast
+        <tr>
+            <td><img src="~/Content/@Model.FiveDayForecast[0].ImageCondition.Replace(" ", "-")" /></td>
+            <td><img src="~/Content/@Model.FiveDayForecast[1].ImageCondition.Replace(" ", "-")" /></td>
+            <td><img src="~/Content/@Model.FiveDayForecast[2].ImageCondition.Replace(" ", "-")" /></td>
+            <td><img src="~/Content/@Model.FiveDayForecast[3].ImageCondition.Replace(" ", "-")" /></td>
+            <td><img src="~/Content/@Model.FiveDayForecast[4].ImageCondition.Replace(" ", "-")" /></td>
+        </tr>
         <tr>
             High Temperature
             <td>Day 1: High of @Model.FiveDayForecast[0].High</td>
@@ -65,7 +73,7 @@
         @Html.RadioButtonFor(m => m.NeedsConverted, true)
         <button>Convert to </button>
     </div>
-    
+
 }
 
 
