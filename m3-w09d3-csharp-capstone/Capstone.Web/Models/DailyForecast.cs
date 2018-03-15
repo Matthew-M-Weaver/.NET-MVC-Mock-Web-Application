@@ -12,16 +12,6 @@ namespace Capstone.Web.Models
         public int High { get; set; }
         public string Conditions { get; set; }
 
-        public void ConvertToCelsius()
-        {
-            Low = ((Low - 32) * (5 / 9));
-            High = ((High - 32) * (5 / 9));
-        }
-
-        public void ConvertToFarenheit()
-        {
-            Low = (Low * (9 / 5) + 32);
-            High = (High * (9 / 5) + 32);
-        }
+        
     }
 }

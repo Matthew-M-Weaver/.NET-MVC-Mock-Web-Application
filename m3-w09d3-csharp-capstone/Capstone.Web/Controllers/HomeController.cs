@@ -42,7 +42,9 @@ namespace Capstone.Web.Controllers
                 {
                     foreach (DailyForecast forecast in park.FiveDayForecast)
                     {
-                        forecast.ConvertToFarenheit();
+                        forecast.High = (int)(forecast.High * 1.8 + 32);
+                        forecast.Low = (int)(forecast.Low * 1.8 + 32);
+
                     }
                     park.TempType = "fahrenheit";
                 }
@@ -50,7 +52,8 @@ namespace Capstone.Web.Controllers
                 {
                     foreach (DailyForecast forecast in park.FiveDayForecast)
                     {
-                        forecast.ConvertToCelsius();
+                        forecast.High = (int)((forecast.High - 32) * .5556);
+                        forecast.Low = (int)((forecast.Low - 32) * .5556);
                     }
                     park.TempType = "celsius";
                 }
