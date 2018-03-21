@@ -1,33 +1,36 @@
-﻿<!DOCTYPE html>
-
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
 <html>
-
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>National Park Weather Service</title>
-    <link rel="stylesheet" href="~/Content/stylesheet.css" />
+    <meta charset="UTF-8">
+    <title>National Parks Weather Service</title>
+    <link rel="stylesheet" href="~/Content/stylesheet.css">
 </head>
+
 <body>
-    
-    <header class="container">
-        <img src="~/Content/logo.png" alt="National Park Weather Service Logo" />
+    <header>
+        <img src="~/Content/logo.png" />
+        <h1>National Parks Weather Service</h1>
+        <p></p>
     </header>
     <nav>
+        <h2></h2>
+        <p>Check out our parks and our ongoing, User-Voted, Favorite Park survey!</p>
         <ul>
-            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-            <li>@Html.ActionLink("Daily Survey!", "Survey", "Home")</li>
-            <li>@Html.ActionLink("Park Rankings", "SurveyResults", "Home")</li>
+            <li>@Html.ActionLink("Parks", "Index", "Home")</li>
+            <li>@Html.ActionLink("Daily Survey", "Survey", "Home")</li>
+            <li>@Html.ActionLink("Survey Results", "SurveyResults", "Home")</li>
         </ul>
     </nav>
-
-    <section id="main">
-
+    <section class="centeredPanel">
 
         @RenderBody()
-
     </section>
     <footer>
-        National Park Weather Service
+        <h4 style="color:white;">National Parks Weather Service Website</h4>
     </footer>
 </body>
 </html>

@@ -79,21 +79,26 @@
     activityLevels.Add(new SelectListItem { Text = "Sedentary", Value = "Sedentary" });
     activityLevels.Add(new SelectListItem { Text = "Active", Value = "Active" });
     activityLevels.Add(new SelectListItem { Text = "Extremely Active", Value = "Extremely Active" });
-<div class="descriptor">
-    @Html.DropDownListFor(m => m.ParkCode, parkCodes, "Select Favorite Park: ")
+<div class="detail-tile" style="text-align: left;">
+    <div class="descriptor">
+        @Html.DropDownListFor(m => m.ParkCode, parkCodes, "Select Favorite Park: ")
+        @Html.ValidationMessageFor(m => m.ParkCode)
 
-</div>
-<div class="descriptor">
-    @Html.Label("EmailAddress", "Email Address")
-    @Html.TextBoxFor(m => m.EmailAddress)
-</div>
-<div class="descriptor">
-    @Html.DropDownListFor(m => m.State, states, "State of Residence")
-</div>
-<div class="descriptor">
-    @Html.DropDownListFor(m => m.ActivityLevel, activityLevels, "Aproximate Activity Level")
-</div>
-<div class="descriptor"><button>Submit</button></div>
-        }
+    </div>
+    <div class="descriptor">
+        @Html.Label("EmailAddress", "Email Address")
+        @Html.TextBoxFor(m => m.EmailAddress)
+        @Html.ValidationMessageFor(m => m.EmailAddress)
+    </div>
+    <div class="descriptor">
+        @Html.DropDownListFor(m => m.State, states, "State of Residence")
+        @Html.ValidationMessageFor(m => m.State)
+    </div>
+    <div class="descriptor">
+        @Html.DropDownListFor(m => m.ActivityLevel, activityLevels, "Aproximate Activity Level")
+        @Html.ValidationMessageFor(m => m.ActivityLevel)
+    </div>
+    <div class="descriptor"><button>Submit</button></div>
+</div>       }
 
 

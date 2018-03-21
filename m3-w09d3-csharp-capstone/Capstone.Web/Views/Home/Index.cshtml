@@ -3,16 +3,18 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1>National Parks</h1>
-<p>Welcome! Here, as you can see, is a list of National Parks that are located in the United States. If you would like more details on any of the parks, feel free to click the image or name of that park! Thank you for choosing the National Park Weather Service!</p>
+<div class="home-title">
+    <h1 style="font-size:35px;">National Parks</h1>
+    <h3>Welcome! Here, as you can see, is a list of National Parks that are located in the United States. If you would like more details on any of the parks, feel free to click the image or name of that park! Thank you for choosing the National Park Weather Service Website!</h3>
+</div>
 
 @foreach (ParkModel park in Model)
 {
-<div class="inline-block">
-    <div class="park"><a href="@Url.Action("Detail", "Home", park, null)"><img src="~/Content/@park.ImageLocation" /></a></div>
-    <div class="descriptor">
-        <a href="@Url.Action("Detail", "Home", park, null)">@park.ParkName</a>
-        @park.ParkDescription
+<div class="home-tile">
+    <div class="column"><a href="@Url.Action("Detail", "Home", park, null)"><img class="home-img" src="~/Content/@park.ImageLocation" /></a></div>
+    <div class="column">
+        <h3><a href="@Url.Action("Detail", "Home", park, null)">@park.ParkName</a></h3>
+        <p class="home-text">@park.ParkDescription</p>
     </div>
 </div>
 }

@@ -75,6 +75,10 @@ namespace Capstone.Web.Controllers
         [HttpPost]
         public ActionResult Commit(SurveyModel survey)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Survey", survey);
+            }
             surveyDAL.CommitSurvey(survey);
             return RedirectToAction("SurveyResults");
         }
